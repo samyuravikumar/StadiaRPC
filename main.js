@@ -10,14 +10,14 @@ let gameOn = true;
 let ccOn = false;
 
 (async function() {
-    let gamesDbResponse = await fetch("https://raw.githubusercontent.com/samyuravikumar/StadiaRPC/25f1c2e6213abbdeb1e964648e457bcbe14f30fe/masterdatagame.json");
+    let gamesDbResponse = await fetch("https://raw.githubusercontent.com/samyuravikumar/StadiaRPC/master/masterdatagame.json");
     gamesDb = await gamesDbResponse.json();
     gamesDb = gamesDb["data"];
 
-    let rpcDbResponse = await fetch("https://raw.githubusercontent.com/samyuravikumar/StadiaRPC/25f1c2e6213abbdeb1e964648e457bcbe14f30fe/stadia.json");
+    let rpcDbResponse = await fetch("https://raw.githubusercontent.com/samyuravikumar/StadiaRPC/master/stadia.json");
     rpcDb = await rpcDbResponse.json();
 
-    let response = await fetch("https://raw.githubusercontent.com/samyuravikumar/StadiaRPC/25f1c2e6213abbdeb1e964648e457bcbe14f30fe/games.json");
+    let response = await fetch("https://raw.githubusercontent.com/samyuravikumar/StadiaRPC/master/games.json");
     games = await response.json();
 
     // Get settings
